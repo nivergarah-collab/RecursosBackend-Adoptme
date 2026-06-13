@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
@@ -18,7 +19,7 @@ if (!mongoURI) {
 
 try {
   await mongoose.connect(mongoURI);
-  console.log("🌱 Conexión a MongoDB Atlas establecida con éxito.");
+  console.log("🌱 Conexión a MongoDB establecida con éxito.");
 } catch (error) {
   console.error("❌ Error al conectar a MongoDB:", error.message);
   process.exit(1);
