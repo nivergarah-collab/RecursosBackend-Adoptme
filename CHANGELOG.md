@@ -37,7 +37,7 @@ Utiliza la siguiente estructura para tus mensajes de Git:
 
 ## [0.1.1] - Analisis documental y validacion de plan - 2026-06-14
 ### Aniadido
-- Creacion de `auxiliar/ScrumOps/plan_validation.md` con resumen documental, inconsistencias, cobertura, vacios y propuesta de integracion del plan (Commit: `65f5369`).
+- Creacion de `auxiliar/ScrumOps/plan_validation.md` con resumen documental, inconsistencias, cobertura, vacios y propuesta de integracion del plan (Commit: `7a3f024`).
 
 ## [0.1.0] - Sprint 0: Configuración Inicial e Informes - 2026-06-13
 ### Añadido
