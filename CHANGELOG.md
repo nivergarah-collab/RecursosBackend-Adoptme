@@ -35,6 +35,10 @@ Utiliza la siguiente estructura para tus mensajes de Git:
 
 ---
 
+## [0.1.2] - Inicio Sprint 1 - 2026-06-14
+### Modificado
+- Desacople de `app` y `server`; `start` y `dev` pasan a usar `src/server.js` con `pnpm` (Commit: `pendiente`).
+
 ## [0.1.1] - Analisis documental y validacion de plan - 2026-06-14
 ### Aniadido
 - Creacion de `auxiliar/ScrumOps/plan_validation.md` con resumen documental, inconsistencias, cobertura, vacios y propuesta de integracion del plan (Commit: `7a3f024`).
