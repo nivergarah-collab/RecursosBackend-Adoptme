@@ -35,6 +35,18 @@ Utiliza la siguiente estructura para tus mensajes de Git:
 
 ---
 
+## [0.1.2] - Inicio Sprint 1 - 2026-06-14
+### Modificado
+- Desacople de `app` y `server`; `start` y `dev` pasan a usar `src/server.js` con `pnpm` (Commit: `pendiente`).
+- Inyeccion simple de servicios para tests y suite funcional de `adoption.router.js` con mocks/fakes en memoria (Commit: `pendiente`).
+- `deleteUser` elimina realmente y `createPetWithImage` valida archivo, usa ruta relativa y captura errores basicos (Commit: `pendiente`).
+- Sesiones usan `JWT_SECRET`, `unprotectedLogin` pasa a `POST` y `current`/`unprotectedCurrent` responden sin colgar la app (Commit: `pendiente`).
+- Se agregan `asyncHandler`, `errorHandler` y validacion de ObjectId en rutas para evitar crashes por errores asincronos e IDs invalidos (Commit: `pendiente`).
+
+## [0.1.1] - Analisis documental y validacion de plan - 2026-06-14
+### Aniadido
+- Creacion de `auxiliar/ScrumOps/plan_validation.md` con resumen documental, inconsistencias, cobertura, vacios y propuesta de integracion del plan (Commit: `7a3f024`).
+
 ## [0.1.0] - Sprint 0: Configuración Inicial e Informes - 2026-06-13
 ### Añadido
 - Creación de la estructura del proyecto y análisis de estado inicial (Commit: `9a8b7c6`).

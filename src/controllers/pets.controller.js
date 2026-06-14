@@ -1,6 +1,5 @@
 import PetDTO from "../dto/Pet.dto.js";
 import { petsService } from "../services/index.js"
-import __dirname from "../utils/index.js";
 
 const getAllPets = async(req,res)=>{
     const pets = await petsService.getAll();
@@ -29,19 +28,24 @@ const deletePet = async(req,res)=> {
 }
 
 const createPetWithImage = async(req,res) =>{
-    const file = req.file;
-    const {name,specie,birthDate} = req.body;
-    if(!name||!specie||!birthDate) return res.status(400).send({status:"error",error:"Incomplete values"})
-    console.log(file);
-    const pet = PetDTO.getPetInputFrom({
-        name,
-        specie,
-        birthDate,
-        image:`${__dirname}/../public/img/${file.filename}`
-    });
-    console.log(pet);
-    const result = await petsService.create(pet);
-    res.send({status:"success",payload:result})
+    try {
+        const file = req.file;
+        const {name,specie,birthDate} = req.body;
+        if(!file) return res.status(400).send({status:"error",error:"No image file provided in 'image' field"});
+        if(!name||!specie||!birthDate) return res.status(400).send({status:"error",error:"Incomplete values"})
+
+        const pet = PetDTO.getPetInputFrom({
+            name,
+            specie,
+            birthDate,
+            image:`/img/${file.filename}`
+        });
+
+        const result = await petsService.create(pet);
+        res.send({status:"success",payload:result})
+    } catch (error) {
+        res.status(500).send({status:"error",error:error.message || "Internal server error"})
+    }
 }
 export default {
     getAllPets,
