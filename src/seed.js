@@ -5,16 +5,10 @@ import userModel from './dao/models/User.js';
 import petModel from './dao/models/Pet.js';
 import adoptionModel from './dao/models/Adoption.js';
 import { createHash } from './utils/index.js';
-
-const mongoURI = process.env.MONGO_URL;
-
-if (!mongoURI) {
-  console.error('ERROR: La variable de entorno MONGO_URL no esta definida.');
-  process.exit(1);
-}
+import { connectMongoDB } from './config/mongo.js';
 
 try {
-  await mongoose.connect(mongoURI);
+  await connectMongoDB();
 
   const userEmail = 'seed.adoptme@example.com';
   const user = await userModel.findOneAndUpdate(
