@@ -35,6 +35,12 @@ Utiliza la siguiente estructura para tus mensajes de Git:
 
 ---
 
+## [0.1.3] - Cierre Sprint 2 - 2026-06-14
+### Aniadido
+- `Dockerfile` y `.dockerignore` para ejecutar la app con `pnpm` sobre `node:alpine` (Commit: `pendiente`).
+### Modificado
+- Ejecucion validada del contenedor `adoptme-back:1.0` con `--env-file .env` y conexion correcta a Mongo Atlas (Commit: `pendiente`).
+
 ## [0.1.2] - Inicio Sprint 1 - 2026-06-14
 ### Modificado
 - Desacople de `app` y `server`; `start` y `dev` pasan a usar `src/server.js` con `pnpm` (Commit: `pendiente`).
