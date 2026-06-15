@@ -1,32 +1,30 @@
 # RecursosBackend-Adoptme
 
-> [!NOTE]
-> Entrega final de Backend III. Proyecto backend para gestion de usuarios, mascotas, sesiones y adopciones, con pruebas funcionales y ejecucion en Docker.
-
----
 
 ## Enlaces Oficiales
 
-| Plataforma | Recurso |
-| :-- | :-- |
-| GitHub | [nivergarah-collab/RecursosBackend-Adoptme](https://github.com/nivergarah-collab/RecursosBackend-Adoptme) |
-| Docker Hub | [nivergara/adoptme-back](https://hub.docker.com/repository/docker/nivergara/adoptme-back/general) |
-| Imagen publica | `nivergara/adoptme-back:1.0` |
+
+| Plataforma     | Recurso                                                                                                   |
+| :------------- | :-------------------------------------------------------------------------------------------------------- |
+| GitHub         | [nivergarah-collab/RecursosBackend-Adoptme](https://github.com/nivergarah-collab/RecursosBackend-Adoptme) |
+| Docker Hub     | [nivergara/adoptme-back](https://hub.docker.com/repository/docker/nivergara/adoptme-back/general)         |
+| Imagen publica | `nivergara/adoptme-back:1.0`                                                                              |
 
 ---
 
 ## Stack Tecnologico
 
-| Componente | Uso |
-| :-- | :-- |
-| Node.js 24 | Runtime |
-| Express 4 | API HTTP |
-| MongoDB Atlas + Mongoose | Persistencia |
-| JWT + cookies | Sesiones |
-| Multer | Carga de imagenes |
-| pnpm | Gestor de paquetes |
-| Mocha + Chai + Supertest | Tests funcionales |
-| Docker | Empaquetado y ejecucion aislada |
+
+| Componente               | Uso                             |
+| :----------------------- | :------------------------------ |
+| Node.js 24               | Runtime                         |
+| Express 4                | API HTTP                        |
+| MongoDB Atlas + Mongoose | Persistencia                    |
+| JWT + cookies            | Sesiones                        |
+| Multer                   | Carga de imagenes               |
+| pnpm                     | Gestor de paquetes              |
+| Mocha + Chai + Supertest | Tests funcionales               |
+| Docker                   | Empaquetado y ejecucion aislada |
 
 ---
 
@@ -190,37 +188,41 @@ docker run --rm adoptme-back-test:1.0
 
 ### Sesiones - `/api/sessions`
 
-| Metodo | Endpoint | Descripcion |
-| :-- | :-- | :-- |
-| `POST` | `/register` | Registro de usuario |
-| `POST` | `/login` | Login tradicional |
-| `POST` | `/unprotectedLogin` | Login de prueba |
-| `GET` | `/current` | Usuario autenticado desde `coderCookie` |
-| `GET` | `/unprotectedCurrent` | Usuario autenticado desde `unprotectedCookie` |
+
+| Metodo | Endpoint              | Descripcion                                  |
+| :----- | :-------------------- | :------------------------------------------- |
+| `POST` | `/register`           | Registro de usuario                          |
+| `POST` | `/login`              | Login tradicional                            |
+| `POST` | `/unprotectedLogin`   | Login de prueba                              |
+| `GET`  | `/current`            | Usuario autenticado desde`coderCookie`       |
+| `GET`  | `/unprotectedCurrent` | Usuario autenticado desde`unprotectedCookie` |
 
 ### Usuarios - `/api/users`
 
-| Metodo | Endpoint | Descripcion |
-| :-- | :-- | :-- |
-| `GET` | `/` | Lista de usuarios |
-| `GET` | `/:uid` | Usuario por ID |
-| `PUT` | `/:uid` | Actualizacion de usuario |
-| `DELETE` | `/:uid` | Eliminacion de usuario |
+
+| Metodo   | Endpoint | Descripcion              |
+| :------- | :------- | :----------------------- |
+| `GET`    | `/`      | Lista de usuarios        |
+| `GET`    | `/:uid`  | Usuario por ID           |
+| `PUT`    | `/:uid`  | Actualizacion de usuario |
+| `DELETE` | `/:uid`  | Eliminacion de usuario   |
 
 ### Mascotas - `/api/pets`
 
-| Metodo | Endpoint | Descripcion |
-| :-- | :-- | :-- |
-| `GET` | `/` | Lista de mascotas |
-| `POST` | `/` | Alta de mascota |
-| `POST` | `/withimage` | Alta de mascota con imagen |
-| `PUT` | `/:pid` | Actualizacion de mascota |
-| `DELETE` | `/:pid` | Eliminacion de mascota |
+
+| Metodo   | Endpoint     | Descripcion                |
+| :------- | :----------- | :------------------------- |
+| `GET`    | `/`          | Lista de mascotas          |
+| `POST`   | `/`          | Alta de mascota            |
+| `POST`   | `/withimage` | Alta de mascota con imagen |
+| `PUT`    | `/:pid`      | Actualizacion de mascota   |
+| `DELETE` | `/:pid`      | Eliminacion de mascota     |
 
 ### Adopciones - `/api/adoptions`
 
-| Metodo | Endpoint | Descripcion |
-| :-- | :-- | :-- |
-| `GET` | `/` | Lista de adopciones |
-| `GET` | `/:aid` | Adopcion por ID |
-| `POST` | `/:uid/:pid` | Crear adopcion |
+
+| Metodo | Endpoint     | Descripcion         |
+| :----- | :----------- | :------------------ |
+| `GET`  | `/`          | Lista de adopciones |
+| `GET`  | `/:aid`      | Adopcion por ID     |
+| `POST` | `/:uid/:pid` | Crear adopcion      |
