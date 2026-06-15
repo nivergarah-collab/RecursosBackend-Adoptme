@@ -1,13 +1,12 @@
 # RecursosBackend-Adoptme
 
-
 ## Enlaces Oficiales
 
 
 | Plataforma     | Recurso                                                                                                   |
 | :------------- | :-------------------------------------------------------------------------------------------------------- |
 | GitHub         | [nivergarah-collab/RecursosBackend-Adoptme](https://github.com/nivergarah-collab/RecursosBackend-Adoptme) |
-| Docker Hub     | [nivergara/adoptme-back](https://hub.docker.com/repository/docker/nivergara/adoptme-back/general)         |
+| Docker Hub     | [nivergara/adoptme-back](https://hub.docker.com/r/nivergara/adoptme-back)                                 |
 | Imagen publica | `nivergara/adoptme-back:1.0`                                                                              |
 
 ---
@@ -111,8 +110,6 @@ PORT=3000
 JWT_SECRET=changeme_jwt_secret
 ```
 
-> [!IMPORTANT]
-> La base usada por el proyecto quedo alineada a `test_entrega_backend3`.
 
 ---
 
@@ -144,7 +141,7 @@ docker build -t adoptme-back:1.0 .
 docker run --env-file .env -p 3000:3000 adoptme-back:1.0
 ```
 
-> [!IMPORTANT]
+>
 > Logs esperados:
 >
 > ```text
@@ -175,7 +172,7 @@ docker build -f Dockerfile.test -t adoptme-back-test:1.0 .
 docker run --rm adoptme-back-test:1.0
 ```
 
-> [!IMPORTANT]
+>
 > Salida esperada:
 >
 > ```text
